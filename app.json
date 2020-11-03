@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/rankingnext/rankingnext",
+    "pages/search/search",
+    "pages/content/content",
+    "pages/classify/classify",
+    "pages/classifyItem/classifyItem",
+    "pages/catalogue/catalogue",
+    "pages/details/details",
+    "pages/ranking/ranking",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2c2c2c",
+    "navigationBarTitleText": "雾黑小说排行",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#2c2c2c",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/index_dis.png",
+      "selectedIconPath": "/images/index_en.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行榜",
+        "iconPath": "/images/ranking_dis.png",
+        "selectedIconPath": "/images/ranking_en.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/images/disclassify.png",
+        "selectedIconPath": "/images/enclassify.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "/images/disclassify.png",
+        "selectedIconPath": "/images/enclassify.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

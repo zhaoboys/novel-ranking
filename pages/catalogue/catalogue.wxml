@@ -1,0 +1,11 @@
+<!-- 目录开始 -->
+<view class="main">
+  <view class="catalogue">目录</view>
+  <view>
+    <navigator wx:for="{{chapters}}"wx:key="index" url="/pages/content/content?id={{item.link}}">
+      <view class="chapters">{{item.title}}</view>
+    </navigator>
+  </view>
+  <view class="last">---我就是底线---</view>
+</view>
+<!-- 目录结束 -->

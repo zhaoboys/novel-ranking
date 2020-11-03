@@ -1,0 +1,59 @@
+<!-- 最外层容器开始 -->
+<view>
+  <!-- 轮播图开始 -->
+  <view>
+    <swiper autoplay="true" circular="true" indicator-active-color="#2c2c2c" indicator-dots="true" class="swiper">
+      <swiper-item>
+        <navigator url="/pages/index/index">
+          <image src="http://static.zongheng.com/upload/recommend/ab/7c/ab7c5fe1ce047d8725e12a49718c7046.jpeg"/>
+      </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/index/index">
+          <image src="http://static.zongheng.com/upload/recommend/6c/14/6c14a5cb3548d8d62f2e059f91432afb.jpeg"/>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/index/index">
+          <image src="http://static.zongheng.com/upload/recommend/d5/d8/d5d822860312c033a0497935a3bd091a.jpeg"/>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/index/index">
+          <image src="http://static.zongheng.com/upload/recommend/cf/30/cf30a8cb37861040a24712dbefe45ed2.jpeg"/>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/index/index">
+          <image src="http://static.zongheng.com/upload/recommend/85/22/8522c0fcd5a1761f27d4c721f6f20765.jpeg"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!-- 图书分类极其包含的图书区域开始 -->
+  <view class="container">
+    <!-- 分类列表区域开始 -->
+    <view  class="cateItem" >
+      <view class="header">强推榜</view>
+      <!-- 图书列表区域开始 -->
+      <view wx:for="{{hotWordsitem}}" wx:key="index">
+        <view class="bookItem">
+          <!-- 设置链接 发送书籍id-->
+          <navigator url="/pages/details/details?id={{item.data._id}}">
+            <image src="http://statics.zhuishushenqi.com{{item.data.cover}}"></image>
+            <view class="bookInfo">
+              <view class="bookTitle">{{item.data.title}}</view>
+              <view class="minorCate">{{item.data.minorCate}}</view>
+              <view class="author">{{item.data.author}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 图书列表区域结束 -->
+    </view>
+    <!-- 分类列表区域结束 -->
+  </view>
+  <!-- 图书分类极其包含的图书区域结束 -->
+</view>
+<!-- 最外层容器结束 -->

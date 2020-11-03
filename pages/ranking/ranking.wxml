@@ -1,0 +1,19 @@
+<!-- 获取所有排行榜，然后将榜名进行排列，排列结束后，给予链接，得到每个榜单的详细排名，然后在给每本书链接即可，首页的排行榜需要修改，变为热度最高 -->
+<!-- 总排行开始 -->
+<view class="main">
+  <!-- 顶部导航栏开始 -->
+  <view class="navbar">
+    <view wx:for="{{rank}}" wx:key="index" class="navbar-item  {{index==navindex?'ennavbar-item':''}}" bindtap="navtap" data-index="{{index}}">
+    {{item}}
+    </view>
+  </view>
+  <!-- 顶部导航栏结束 -->
+  <!-- 中间详情开始 -->
+  <view>
+    <view wx:for="{{sum[navindex]}}" wx:key="index" class="mid">
+      <navigator url="/pages/rankingnext/rankingnext?id={{item._id}}">{{item.title}}</navigator>
+    </view>
+  </view>
+  <!-- 中间详情结束 -->
+</view>
+<!-- 总排行结束 -->

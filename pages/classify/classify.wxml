@@ -1,0 +1,19 @@
+<!-- 总分类开始 -->
+<view class="main">
+  <!-- 顶部导航栏开始 -->
+  <view class="navbar">
+    <view wx:for="{{classify}}" wx:key="index" class="navbar-item  {{index==navindex?'ennavbar-item':''}}" bindtap="navtap" data-index="{{index}}">
+    {{rank[index]}}
+    </view>
+  </view>
+  <!-- 顶部导航栏结束 -->
+  <!-- 中间详情开始 -->
+  <view>
+    <view wx:for="{{classify[navindex]}}" wx:key="index" class="mid">
+      <navigator url="/pages/classifyItem/classifyItem?classify={{item.name}}&navindex={{navindex}}">{{item.name}}</navigator>
+      <image src="http://statics.zhuishushenqi.com{{item.bookCover[0]}}" class="image"></image>
+    </view>
+  </view>
+  <!-- 中间详情结束 -->
+</view>
+<!-- 总分类结束 -->

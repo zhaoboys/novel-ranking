@@ -1,0 +1,23 @@
+<view class="container">
+    <!-- 分类列表区域开始 -->
+    <view  class="cateItem">
+      <view class="header">{{ranking.title}}</view>
+      <!-- 图书列表区域开始 -->
+      <view wx:for="{{ranking.books}}" wx:key="index">
+        <view class="bookItem">
+          <!-- 设置链接 发送书籍id-->
+          <navigator url="/pages/details/details?id={{item._id}}">
+            <image src="http://statics.zhuishushenqi.com{{item.cover}}"></image>
+            <view class="bookInfo">
+              <view class="bookTitle">{{item.title}}</view>
+              <view class="minorCate">{{item.minorCate}}</view>
+              <view class="author">{{item.author}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 图书列表区域结束 -->
+    </view>
+    <!-- 分类列表区域结束 -->
+  </view>
+  <!-- 图书分类极其包含的图书区域结束 -->
