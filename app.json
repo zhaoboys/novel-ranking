@@ -41,8 +41,8 @@
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "/images/disclassify.png",
-        "selectedIconPath": "/images/enclassify.png"
+        "iconPath": "/images/dissearch.png",
+        "selectedIconPath": "/images/search.png"
       }
     ]
   },

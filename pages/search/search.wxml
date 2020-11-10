@@ -1,2 +1,27 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<!-- 外层容器开始 -->
+<view>
+  <!-- 搜索栏开始 -->
+  <view class="search">
+    <image src="/images/topsearch.png" class="search"></image>
+    <input type="text" placeholder="请输入书籍名称" maxlength="30"  confirm-type="search" bindconfirm="startSearch" value="{{value}}" bindinput="input"/>
+  </view>
+  <!-- 搜索栏结束 -->
+  <!-- 搜素结果开始 -->
+  <view class="main">
+    <view wx:for="{{books}}" wx:key="index">
+        <view class="bookItem">
+          <!-- 设置链接 发送书籍id-->
+          <navigator url="/pages/details/details?id={{item._id}}">
+            <image src="http://statics.zhuishushenqi.com{{item.cover}}"></image>
+            <view class="bookInfo">
+              <view class="bookTitle">{{item.title}}</view>
+              <view class="minorCate">{{item.cat}}</view>
+              <view class="author">{{item.author}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+  </view>
+  <!-- 搜索结果结束 -->
+</view>
+<!-- 外层容器结束 -->
