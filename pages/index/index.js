@@ -35,8 +35,6 @@ Page({
             }
           })
         }
-        console.log(this.data.charts)
-        console.log(this.data.epub)
       }
     })
 
